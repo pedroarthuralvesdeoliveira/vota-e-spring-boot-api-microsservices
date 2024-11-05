@@ -35,174 +35,6 @@
           }
         },
         {
-          "name": "Sugestoes",
-          "item": [
-            {
-              "name": "Buscar sugestão pelo ID",
-              "event": [],
-              "request": {
-                "method": "GET",
-                "header": [],
-                "auth": null,
-                "description": "",
-                "url": {
-                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes?id=",
-                  "protocol": "http",
-                  "host": [
-                    "localhost:5051"
-                  ],
-                  "path": [
-                    "sugestoes-ms",
-                    "api",
-                    "sugestoes"
-                  ],
-                  "query": [
-                    {
-                      "key": "id",
-                      "value": ""
-                    }
-                  ],
-                  "variable": []
-                },
-                "body": {
-                  "mode": "raw",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "name": "Cadastrar sugestão",
-              "event": [],
-              "request": {
-                "method": "POST",
-                "header": [],
-                "auth": {
-                  "type": "bearer",
-                  "bearer": {
-                    "key": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2b3RhLWUiLCJzdWIiOiJwZWRyb0BwZWRyb2Rlb2xpdmVpcmEuY29tIiwiZXhwIjoxNzI5NzQ3ODU0fQ.72xJNuiuhcyZxWhvYkcbzO7a8BqNdEotZdgtqxHVHBE",
-                    "type": "string"
-                  }
-                },
-                "description": "",
-                "url": {
-                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes",
-                  "protocol": "http",
-                  "host": [
-                    "localhost:5051"
-                  ],
-                  "path": [
-                    "sugestoes-ms",
-                    "api",
-                    "sugestoes"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"descricao\": \"lombada nova\",\n  \"localizacao\": \"rua emilio de menezes 165\",\n  \"observacao\": \"em frente ao posto\",\n  \"usuarioId\": 2\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "name": "Editar sugestão",
-              "event": [],
-              "request": {
-                "method": "PUT",
-                "header": [],
-                "auth": null,
-                "description": "",
-                "url": {
-                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes",
-                  "protocol": "http",
-                  "host": [
-                    "localhost:5051"
-                  ],
-                  "path": [
-                    "sugestoes-ms",
-                    "api",
-                    "sugestoes"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"descricao\": \"lombada veia\",\n  \"localizacao\": \"rua emilio de menezes 165\",\n  \"observacao\": \"em frente ao posto\",\n  \"usuarioId\": 2\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "name": "Excluir sugestão",
-              "event": [],
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "auth": null,
-                "description": "",
-                "url": {
-                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes?id=",
-                  "protocol": "http",
-                  "host": [
-                    "localhost:5051"
-                  ],
-                  "path": [
-                    "sugestoes-ms",
-                    "api",
-                    "sugestoes"
-                  ],
-                  "query": [
-                    {
-                      "key": "id",
-                      "value": ""
-                    }
-                  ],
-                  "variable": []
-                }
-              }
-            },
-            {
-              "name": "Listar sugestões",
-              "event": [],
-              "request": {
-                "method": "GET",
-                "header": [],
-                "auth": null,
-                "description": "",
-                "url": {
-                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes",
-                  "protocol": "http",
-                  "host": [
-                    "localhost:5051"
-                  ],
-                  "path": [
-                    "sugestoes-ms",
-                    "api",
-                    "sugestoes"
-                  ],
-                  "query": [],
-                  "variable": []
-                }
-              }
-            }
-          ]
-        },
-        {
           "name": "Projetos",
           "item": [
             {
@@ -214,7 +46,7 @@
                 "auth": null,
                 "description": "",
                 "url": {
-                  "raw": "http://localhost:5051/projetos-ms/api/projetos?id=",
+                  "raw": "http://localhost:5051/projetos-ms/api/projetos?id=1",
                   "protocol": "http",
                   "host": [
                     "localhost:5051"
@@ -227,7 +59,7 @@
                   "query": [
                     {
                       "key": "id",
-                      "value": ""
+                      "value": "1"
                     }
                   ],
                   "variable": []
@@ -258,38 +90,7 @@
                 },
                 "body": {
                   "mode": "raw",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "name": "Criar projeto",
-              "event": [],
-              "request": {
-                "method": "POST",
-                "header": [],
-                "auth": null,
-                "description": "",
-                "url": {
-                  "raw": "http://localhost:5051/projetos-ms/api/projetos",
-                  "protocol": "http",
-                  "host": [
-                    "localhost:5051"
-                  ],
-                  "path": [
-                    "projetos-ms",
-                    "api",
-                    "projetos"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "body": {
-                  "mode": "raw",
+                  "raw": "{\n  \"projetoId\": 1,\n  \"descricao\": \"sugestao nº #36570 sobre X, Y, Z é sobre A, B, C, D e F\",\n  \"titulo\": \"sugestao nº #36570 sobre X, Y, Z\",\n  \"sugestaoId\": 1\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -352,6 +153,46 @@
                   ],
                   "query": [],
                   "variable": []
+                }
+              }
+            },
+            {
+              "name": "Criar projeto",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2b3RhLWUiLCJzdWIiOiJwZWRyb0BwZWRyb2Rlb2xpdmVpcmEuY29tIiwiZXhwIjoxNzMwNzgzOTM5fQ.WhaV3By_FPglrC3OGkrLUp8qCTR4xRBu_enZ6Z-9m68",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:5051/projetos-ms/api/projetos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:5051"
+                  ],
+                  "path": [
+                    "projetos-ms",
+                    "api",
+                    "projetos"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"descricao\": \"sugestao nº #36570 sobre X, Y, Z é sobre A, B, C\",\n  \"titulo\": \"sugestao nº #36570 sobre X, Y, Z\",\n  \"sugestaoId\": 1,\n  \"status\": \"EM_ELABORACAO\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 }
               }
             }
@@ -422,7 +263,76 @@
                     },
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n  \"id\": 1,\n  \"nome\": \"Pedro Oliveira\",\n  \"email\": \"pedro@dev.com\",\n  \"senha\": \"123\",\n  \"telefone\": \"45999999999\"\n}",
+                      "raw": "{\n  \"usuarioId\": 1,\n  \"nome\": \"Pedro Oliveira\",\n  \"email\": \"pedro@dev.com\",\n  \"senha\": \"123\",\n  \"telefone\": \"45999999999\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Buscar usuário pelo telefone",
+                  "event": [],
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "key": "token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2b3RhLWUiLCJzdWIiOiJwZWRyb0BwZWRyb2Rlb2xpdmVpcmEuY29tIiwiZXhwIjoxNzMwNjk5NjQ5fQ.4WM1zSnLt-wV3rJ5Rx3ZVPC1soB2_0tT4NVj7kou1eI",
+                        "type": "string"
+                      }
+                    },
+                    "description": "",
+                    "url": {
+                      "raw": "http://localhost:5051/usuarios-ms/api/usuarios?telefone=45998765431",
+                      "protocol": "http",
+                      "host": [
+                        "localhost:5051"
+                      ],
+                      "path": [
+                        "usuarios-ms",
+                        "api",
+                        "usuarios"
+                      ],
+                      "query": [
+                        {
+                          "key": "telefone",
+                          "value": "45998765431"
+                        }
+                      ],
+                      "variable": []
+                    }
+                  }
+                },
+                {
+                  "name": "Criar usuario",
+                  "event": [],
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "auth": null,
+                    "description": "",
+                    "url": {
+                      "raw": "http://localhost:5051/usuarios-ms/auth/register",
+                      "protocol": "http",
+                      "host": [
+                        "localhost:5051"
+                      ],
+                      "path": [
+                        "usuarios-ms",
+                        "auth",
+                        "register"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"nome\": \"Pedro de Oliveira\",\n  \"email\": \"pedro@pedrodeoliveira.com\",\n  \"senha\": \"Pedro123\",\n  \"telefone\": \"45998765431\",\n  \"role\": \"USER\"\n}",
                       "options": {
                         "raw": {
                           "language": "json"
@@ -468,42 +378,6 @@
                   }
                 },
                 {
-                  "name": "Buscar usuário pelo telefone",
-                  "event": [],
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "auth": {
-                      "type": "bearer",
-                      "bearer": {
-                        "key": "token",
-                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2b3RhLWUiLCJzdWIiOiJwZWRyb0BwZWRyb2Rlb2xpdmVpcmEuY29tIiwiZXhwIjoxNzMwNjk5NjQ5fQ.4WM1zSnLt-wV3rJ5Rx3ZVPC1soB2_0tT4NVj7kou1eI",
-                        "type": "string"
-                      }
-                    },
-                    "description": "",
-                    "url": {
-                      "raw": "http://localhost:5051/usuarios-ms/api/usuarios?telefone=45998765431",
-                      "protocol": "http",
-                      "host": [
-                        "localhost:5051"
-                      ],
-                      "path": [
-                        "usuarios-ms",
-                        "api",
-                        "usuarios"
-                      ],
-                      "query": [
-                        {
-                          "key": "telefone",
-                          "value": "45998765431"
-                        }
-                      ],
-                      "variable": []
-                    }
-                  }
-                },
-                {
                   "name": "Efetuar login",
                   "event": [],
                   "request": {
@@ -528,39 +402,6 @@
                     "body": {
                       "mode": "raw",
                       "raw": "{\n  \"email\": \"pedro@pedrodeoliveira.com\",\n  \"senha\": \"Pedro123\"\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  "name": "Criar usuario",
-                  "event": [],
-                  "request": {
-                    "method": "POST",
-                    "header": [],
-                    "auth": null,
-                    "description": "",
-                    "url": {
-                      "raw": "http://localhost:5051/usuarios-ms/auth/register",
-                      "protocol": "http",
-                      "host": [
-                        "localhost:5051"
-                      ],
-                      "path": [
-                        "usuarios-ms",
-                        "auth",
-                        "register"
-                      ],
-                      "query": [],
-                      "variable": []
-                    },
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n  \"nome\": \"Pedro de Oliveira\",\n  \"email\": \"pedro@pedrodeoliveira.com\",\n  \"senha\": \"Pedro123\",\n  \"telefone\": \"45998765431\",\n  \"role\": \"USER\"\n}",
                       "options": {
                         "raw": {
                           "language": "json"
@@ -615,21 +456,7 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "auth": {
-                      "type": "basic",
-                      "basic": [
-                        {
-                          "key": "password",
-                          "value": "",
-                          "type": "string"
-                        },
-                        {
-                          "key": "username",
-                          "value": "user",
-                          "type": "string"
-                        }
-                      ]
-                    },
+                    "auth": null,
                     "description": "",
                     "url": {
                       "raw": "http://localhost:5051/usuarios-ms/api/usuarios?size=5&page=0&sort=id",
@@ -667,8 +494,212 @@
                       }
                     }
                   }
+                },
+                {
+                  "name": "Buscar usuario pelo ID",
+                  "event": [],
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": {
+                        "key": "token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2b3RhLWUiLCJzdWIiOiJwZWRyb0BwZWRyb2Rlb2xpdmVpcmEuY29tIiwiZXhwIjoxNzMwNzgwNDk0fQ.6xsZlXR8WnGdW1t1Z_iNZyi_J-EK9uC0LXKyNcwdQDU",
+                        "type": "string"
+                      }
+                    },
+                    "description": "",
+                    "url": {
+                      "raw": "http://localhost:5051/usuarios-ms/api/usuarios?id=1",
+                      "protocol": "http",
+                      "host": [
+                        "localhost:5051"
+                      ],
+                      "path": [
+                        "usuarios-ms",
+                        "api",
+                        "usuarios"
+                      ],
+                      "query": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ],
+                      "variable": []
+                    }
+                  }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "Sugestoes",
+          "item": [
+            {
+              "name": "Buscar sugestão pelo ID",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": null,
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes?id=1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:5051"
+                  ],
+                  "path": [
+                    "sugestoes-ms",
+                    "api",
+                    "sugestoes"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Cadastrar sugestão",
+              "event": [],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "auth": {
+                  "type": "bearer",
+                  "bearer": {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2b3RhLWUiLCJzdWIiOiJwZWRyb0BwZWRyb2Rlb2xpdmVpcmEuY29tIiwiZXhwIjoxNzMwNzgyNjg4fQ.8eorSF5kQEV_wluGfU8o0wvYqm9tx5jyb08hH6M4lcM",
+                    "type": "string"
+                  }
+                },
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:5051"
+                  ],
+                  "path": [
+                    "sugestoes-ms",
+                    "api",
+                    "sugestoes"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"descricao\": \"lombada nova\",\n  \"localizacao\": \"rua emilio de menezes 165\",\n  \"observacao\": \"em frente ao posto\",\n  \"usuarioId\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Editar sugestão",
+              "event": [],
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "auth": null,
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:5051"
+                  ],
+                  "path": [
+                    "sugestoes-ms",
+                    "api",
+                    "sugestoes"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sugestaoId\": 1,\n  \"descricao\": \"lombada veia\",\n  \"localizacao\": \"rua emilio de menezes 165\",\n  \"observacao\": \"em frente ao posto\",\n  \"usuarioId\": 2\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Listar sugestões",
+              "event": [],
+              "request": {
+                "method": "GET",
+                "header": [],
+                "auth": null,
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:5051"
+                  ],
+                  "path": [
+                    "sugestoes-ms",
+                    "api",
+                    "sugestoes"
+                  ],
+                  "query": [],
+                  "variable": []
+                }
+              }
+            },
+            {
+              "name": "Excluir sugestão",
+              "event": [],
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "auth": null,
+                "description": "",
+                "url": {
+                  "raw": "http://localhost:5051/sugestoes-ms/api/sugestoes?id=",
+                  "protocol": "http",
+                  "host": [
+                    "localhost:5051"
+                  ],
+                  "path": [
+                    "sugestoes-ms",
+                    "api",
+                    "sugestoes"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                }
+              }
             }
           ]
         }
