@@ -7,5 +7,5 @@ import java.util.Date;
 import java.util.List;
 
 public interface ProjetoRepository extends JpaRepository<Projeto, Long> {
-    List<Projeto> findByDataCadastroBetween(Date dataInicial, Date dataFinal);
+    List<Projeto> findByDataCriacaoBetween(Date dataInicial, Date dataFinal);
 }

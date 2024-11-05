@@ -1,16 +1,17 @@
 CREATE TABLE TBL_PROJETOS (
-                              ID BIGINT(20) NOT NULL auto_increment,
-                              DESCRICAO nvarchar(200) NOT NULL,
-                              TITULO nvarchar(100) NOT NULL,
-                              STATUS nvarchar(20) CHECK ( STATUS IN ('EM_ELABORACAO', 'ENVIADO', 'APROVADO', 'REJEITADO', 'CANCELADO') ) NOT NULL,
-                              DATA_APROVACAO TIMESTAMP,
-                              DATA_CANCELAMENTO TIMESTAMP,
-                              DATA_CRIACAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-                              DATA_ENVIO TIMESTAMP,
-                              DATA_REJEICAO TIMESTAMP,
+                              ID BIGINT NOT NULL AUTO_INCREMENT,
+                              DESCRICAO VARCHAR(200) NOT NULL,
+                              TITULO VARCHAR(100) NOT NULL,
+                              STATUS VARCHAR(20) NOT NULL,
+                              DATA_APROVACAO TIMESTAMP NULL,
+                              DATA_CANCELAMENTO TIMESTAMP NULL,
+                              DATA_CRIACAO TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                              DATA_ENVIO TIMESTAMP NULL,
+                              DATA_REJEICAO TIMESTAMP NULL,
                               SUGESTAO_ID INTEGER NOT NULL,
-                              primary key (ID),
+                              PRIMARY KEY (ID),
                               CONSTRAINT FK_SUGESTAO_PROJETO
                                   FOREIGN KEY (SUGESTAO_ID)
-                                      references db_sugestoes.TBL_SUGESTOES(ID)
-);
+                                      REFERENCES db_sugestoes.TBL_SUGESTOES(ID),
+                              CONSTRAINT CHK_STATUS CHECK (STATUS IN ('EM_ELABORACAO', 'ENVIADO', 'APROVADO', 'REJEITADO', 'CANCELADO'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

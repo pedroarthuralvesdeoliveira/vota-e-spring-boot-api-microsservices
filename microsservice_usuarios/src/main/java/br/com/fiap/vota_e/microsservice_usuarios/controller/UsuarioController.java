@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api")
 public class UsuarioController {
@@ -55,8 +57,8 @@ public class UsuarioController {
 
     @GetMapping("/usuarios/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Long buscarPorId(@PathVariable Long id) {
-        return usuarioService.buscarPorId(id).usuarioId();
+    public Optional<Long> buscarPorId(@PathVariable Long id) {
+        return Optional.of(usuarioService.buscarPorId(id).usuarioId());
     }
 
     @RequestMapping(value = "/usuarios", params = "telefone")

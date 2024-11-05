@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -37,6 +38,12 @@ public class SugestaoController {
     @RequestMapping(value = "/sugestoes", params = "id")
     public ResponseEntity<SugestaoExibicaoDTO> buscar(@RequestParam Long id) {
         return ResponseEntity.ok(sugestaoService.buscarPorId(id));
+    }
+
+    @GetMapping("/sugestoes/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<Long> buscarPorId(@PathVariable Long id) {
+        return Optional.of(sugestaoService.buscarPorId(id).sugestaoId());
     }
 
     @DeleteMapping("/sugestoes/{id}")

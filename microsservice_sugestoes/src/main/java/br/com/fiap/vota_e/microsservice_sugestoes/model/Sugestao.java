@@ -6,23 +6,18 @@ import lombok.Data;
 import java.util.Date;
 
 @Entity
-@Table(name = "tbl_sugestoes")
+@Table(name = "TBL_SUGESTOES")
 @Data
 public class Sugestao {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "SEQ_SUGESTOES"
-    )
-    @SequenceGenerator(
-            name = "SEQ_SUGESTOES",
-            sequenceName = "SEQ_SUGESTOES",
-            allocationSize = 1
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String descricao;
     private String observacao;
     private String localizacao;
+    @Column(name = "DATA_CRIACAO")
     private Date dataCriacao;
+    @Column(name = "USUARIO_ID")
     private Long usuarioId;
 }

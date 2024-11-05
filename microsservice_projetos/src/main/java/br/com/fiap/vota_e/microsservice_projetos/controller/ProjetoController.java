@@ -1,6 +1,7 @@
 package br.com.fiap.vota_e.microsservice_projetos.controller;
 
 import br.com.fiap.vota_e.microsservice_projetos.dto.ProjetoCadastroDTO;
+import br.com.fiap.vota_e.microsservice_projetos.dto.ProjetoEdicaoDTO;
 import br.com.fiap.vota_e.microsservice_projetos.dto.ProjetoExibicaoDTO;
 import br.com.fiap.vota_e.microsservice_projetos.service.ProjetoService;
 import jakarta.validation.Valid;
@@ -47,8 +48,8 @@ public class ProjetoController {
     }
 
     @PutMapping("/projetos")
-    public ResponseEntity<ProjetoExibicaoDTO> atualizar(@RequestBody @Valid ProjetoCadastroDTO projetoCadastroDTO) {
-        return ResponseEntity.ok(projetoService.atualizar(projetoCadastroDTO));
+    public ResponseEntity<ProjetoExibicaoDTO> atualizar(@RequestBody ProjetoEdicaoDTO projetoEdicaoDTO) {
+        return ResponseEntity.ok(projetoService.atualizar(projetoEdicaoDTO));
     }
 
     @RequestMapping(value = "/projetos", params = {"dataInicio", "dataFim"})
